@@ -1,0 +1,12 @@
+	LJMP START
+	 ORG 100H
+START:
+	
+	LCALL LCD_CLR
+	 MOV A, #10 ; mnoŜna
+	 MOV B, #15 ; mnoŜnik
+	 SUBB A,B ; 
+	 LCALL WRITE_HEX 
+STOP:
+	 SJMP $
+	 NOP

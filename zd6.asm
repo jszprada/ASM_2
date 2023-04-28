@@ -1,0 +1,17 @@
+	LJMP START
+	ORG 100H
+
+START:
+	MOV R1, #10
+	MOV R0, #40H
+	
+	
+ZERO:
+	MOV @R0, #0
+	INC R0
+	
+	DJNZ R1, ZERO
+STOP:	
+	SJMP $
+	
+	NOP
